@@ -28,12 +28,12 @@ context = require.context('./service/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  fomogram.controller(name, module);
+  fomogram.service(name, module);
 });
 
 context = require.context('./component/', true, /\.js$/);
 context.keys().forEach( key => {
   let name = camelcase(path.basename(key, '.js'));
   let module = context(key);
-  fomogram.controller(name, module);
+  fomogram.component(name, module);
 });

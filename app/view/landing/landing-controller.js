@@ -1,9 +1,12 @@
 'use strict';
 
-module.exports = ['$log', LandingController];
+require('./_landing.scss');
 
-function LandingController($log) {
+module.exports = ['$log', '$location', 'authService', LandingController];
+
+function LandingController($log, $location, authService) {
   $log.debug('LandingController');
 
-  this.title = 'welcome to landing';
+  let url = $location.url();
+  this.showSignup = url === '/join#signup' || url === '/join';
 }
