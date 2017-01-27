@@ -1,0 +1,21 @@
+@import "../../scss/lib/base/var";
+
+.landing {
+  padding: 2vw;
+  width: 75%;
+  margin: 0 auto;
+
+  p {
+    float: right;
+  }
+
+  a {
+    color: $brand-grey-dark;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      color: $brand-grey-light;
+    }
+  }
+}
