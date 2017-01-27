@@ -1,6 +1,5 @@
 @import "./reset";
-
-
-html, body {
-  background: orange;
-}
+@import "var";
+@import "global";
+@import "../../../component/landing/signup/signup";
+@import "../../../view/landing/landing";
