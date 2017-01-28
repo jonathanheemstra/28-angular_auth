@@ -5,7 +5,7 @@ module.exports = ['$stateProvider', '$urlRouterProvider', routerConfig];
 function routerConfig($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.when('', '/join#signup');
   $urlRouterProvider.when('/signup', '/join#signup');
-  $urlRouterProvider.when('/signin', '/join#signin');
+  $urlRouterProvider.when('/login' , '/join#login');
 
   let states = [
     {
@@ -27,5 +27,5 @@ function routerConfig($stateProvider, $urlRouterProvider) {
   states.forEach( state => {
     $stateProvider.state(state);
   });
-  
+
 }
