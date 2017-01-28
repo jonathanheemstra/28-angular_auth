@@ -1,0 +1,36 @@
+@import "../../scss/lib/base/var";
+
+.home {
+  margin: 0 auto;
+  width: 90%;
+
+  h2 {
+    font-size: 2vw;
+    padding: 1vw 0 1.5vw 0;
+  }
+
+
+  ul {
+
+    li {
+      background: $brand-grey-medium;
+      margin: 0 0 2vw 0;
+      padding: 2vw;
+      border-radius: 5px;
+      font-weight: bold;
+
+      span {
+        display: block;
+        padding: 1vw;
+
+        span {
+          font-weight: 200;
+          display: inline;
+          padding-left: 1vw;
+        }
+      }
+    }
+  }
+
+
+}

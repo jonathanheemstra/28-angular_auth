@@ -1,0 +1,26 @@
+.btn-lg {
+  font: 3vw $brand-font;
+  border: none;
+  border-radius: 5px;
+  transition: 350ms all;
+  cursor: pointer;
+  padding: .5vw;
+}
+
+.btn-std {
+  font: 2vw $brand-font;
+  border: none;
+  border-radius: 5px;
+  transition: 350ms all;
+  cursor: pointer;
+  padding: .5vw;
+}
+
+.btn-sm {
+  font: 1.5vw $brand-font;
+  border: none;
+  border-radius: 5px;
+  transition: 350ms all;
+  cursor: pointer;
+  padding: .5vw;
+}

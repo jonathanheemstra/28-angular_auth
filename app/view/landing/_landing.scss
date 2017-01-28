@@ -1,12 +1,17 @@
 @import "../../scss/lib/base/var";
 
 .landing {
-  padding: 2vw;
-  width: 75%;
   margin: 0 auto;
+  width: 90%;
+
+  h2 {
+    font-size: 2vw;
+    padding: 1vw 0 1.5vw 0;
+  }
 
   p {
     float: right;
+    padding: 2vw 0;
   }
 
   a {

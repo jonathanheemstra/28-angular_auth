@@ -1,23 +1,14 @@
 @import "../../../scss/lib/base/var";
 
 .signup {
-  height: 100%;
-  width: 95%;
-  margin: 0 auto;
-
-  h1 {
-    font-size: $font-size-lg;
-    padding: 2vw 0;
-
-    a {
-      text-decoration: none;
-    }
-  }
-
   input {
-    width: 100%;
-    font-size: $font-size-lg;
-    margin: 0 0 2vw 0;
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5vw 2vw;
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    width: 94%;
   }
 
   label {
@@ -25,18 +16,17 @@
   }
 
   input[type="submit"] {
-    font: 2vw $brand-font;
-    color: $brand-white;
-    border: none;
-    border-radius: 3px;
-    transition: 350ms all;
-    background-color: $brand-grey-dark;
-    cursor: pointer;
-    width: 50%;
     float: right;
+    padding: 1vw 2vw;
+    background-color: $brand-grey-dark;
+    color: $brand-white;
+    margin-top: 2vw;
+    width: 20%;
+    font-size: 2vw;
 
     &:hover {
-      background-color: $brand-grey-light;
+      background-color: $btn-hover-dark;
+      color: $brand-white;
     }
   }
 }

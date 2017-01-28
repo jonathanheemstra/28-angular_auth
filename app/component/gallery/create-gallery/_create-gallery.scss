@@ -1,0 +1,26 @@
+@import "../../../scss/lib/base/var";
+
+.create-gallery {
+  input {
+    max-width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 1.5vw 2vw;
+    font-size: 1.5vw;
+    margin: 1vw 0;
+    width: 94%;
+  }
+
+  button {
+    float: right;
+    padding: 1vw 2vw;
+    background-color: $brand-grey-dark;
+    color: $brand-white;
+    margin-top: 2vw;
+
+    &:hover {
+      background-color: $btn-hover-dark;
+      color: $brand-white;
+    }
+  }
+}

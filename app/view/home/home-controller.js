@@ -7,7 +7,7 @@ module.exports = ['$log', '$rootScope', 'galleryService', HomeController];
 function HomeController($log, $rootScope, galleryService) {
   $log.debug('HomeController');
 
-  this.title = 'welcome home';
+  this.title = 'create a new gallery.';
 
   this.galleries = [];
 
@@ -23,5 +23,5 @@ function HomeController($log, $rootScope, galleryService) {
   $rootScope.$on('$locationChangeSuccess', () => {
     this.fetchGalleries();
   });
-  
+
 }

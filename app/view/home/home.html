@@ -2,10 +2,13 @@
   <h2>{{ homeCtrl.title }}</h2>
 
   <create-gallery></create-gallery>
+  <div class="clearfix"></div>
+  <h2>galleries</h2>
   <ul>
     <li ng-repeat="gallery in homeCtrl.galleries">
-      <span>gallery name: <span>{{ gallery.name }}</span></span>
-      <span>gallery description: <span>{{ gallery.desc }}</span></span>
+      <span>gallery name:<span>{{ gallery.name }}</span></span>
+      <span>gallery description:<span>{{ gallery.desc }}</span></span>
     </li>
   </ul>
+  <div class="clearfix"></div>
 </section>
