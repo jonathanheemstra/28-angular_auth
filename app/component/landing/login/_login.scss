@@ -1,16 +1,10 @@
 .login-form {
-  input {
-    max-width: 100%;
-    border: none;
-    border-radius: 5px;
-    padding: 1.5vw 2vw;
-    font-size: 1.5vw;
-    margin: 1vw 0;
-    width: 94%;
-  }
-
   label {
     font-size: $font-size-lg;
+
+    @media screen and (max-width: 750px) {
+      font-size: $font-size-lg-sv;
+    }
   }
 
   button {
@@ -24,6 +18,12 @@
     &:hover {
       background-color: $btn-hover-dark;
       color: $brand-white;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 60%;
+      padding: 3vw 6vw;
+      font-size: $font-size-std-sv;
     }
   }
 }

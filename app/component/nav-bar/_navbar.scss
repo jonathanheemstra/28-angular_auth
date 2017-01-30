@@ -9,6 +9,11 @@
     padding: 2vw 0;
     color: $brand-white;
     font-weight: 200;
+
+    @media screen and (max-width: 750px) {
+      font-size: $font-size-lg-sv;
+      padding: 3vw;
+    }
   }
 
   ul {
@@ -34,6 +39,10 @@
     float: left;
     width: 4vw;
     margin: 1vw;
+
+    @media screen and (max-width: 750px) {
+      display: none;
+    }
   }
 
   button {
@@ -47,6 +56,12 @@
     &:hover {
       background-color: $btn-hover-light;
       color: $brand-white;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 40%;
+      padding: 3vw 6vw;
+      font-size: $font-size-std-sv;
     }
   }
 }

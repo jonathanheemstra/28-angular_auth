@@ -3,8 +3,12 @@
   width: 90%;
 
   h2 {
-    font-size: 2vw;
+    font-size: $font-size-lg;
     padding: 1vw 0 1.5vw 0;
+
+    @media screen and (max-width: 750px) {
+      font-size: $font-size-lg-sv;
+    }
   }
 
 

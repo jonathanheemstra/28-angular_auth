@@ -8,5 +8,9 @@ $font-size-lg: 2vw;
 $font-size-std: 1vw;
 $font-size-sm: .75vw;
 
+$font-size-lg-sv: $font-size-lg * 4;
+$font-size-std-sv: $font-size-std * 4;
+$font-size-sm-sv: $font-size-sm * 4;
+
 $btn-hover-dark: $brand-grey-dark / 2;
 $btn-hover-light: $brand-grey-light / 2;

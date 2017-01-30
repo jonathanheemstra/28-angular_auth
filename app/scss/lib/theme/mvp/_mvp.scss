@@ -34,5 +34,9 @@ footer {
     margin: 0 auto;
     font-size: $font-size-lg;
     text-align: center;
+
+    @media screen and (max-width: 750px) {
+      font-size: $font-size-lg-sv;
+    }
   }
 }
