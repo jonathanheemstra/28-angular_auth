@@ -1,6 +1,6 @@
 'use strict';
 
-require('./scss/lib/base/main.scss');
+require('./scss/main.scss');
 
 const angular = require('angular');
 const path = require('path');

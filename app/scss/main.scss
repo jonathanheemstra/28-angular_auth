@@ -1,0 +1,24 @@
+// ===== Base Styles ===== //
+@import "lib/base/reset";
+@import "lib/base/var";
+@import "lib/base/global";
+
+// ===== Theme Styles ===== //
+@import "lib/theme/mvp/mvp";
+@import "lib/theme/mvp/mvp-buttons";
+
+// ===== View Styles - Home ===== //
+@import "../view/home/home";
+
+// ===== View Styles - Landing ===== //
+@import "../view/landing/landing";
+
+// ===== Component Styles - Gallery ===== //
+@import "../component/gallery/create-gallery/create-gallery";
+
+// ===== Component Styles - Landing ===== //
+@import "../component/landing/login/login";
+@import "../component/landing/signup/signup";
+
+// ===== Component Styles - Nav Bar ===== //
+@import "../component/nav-bar/navbar";
