@@ -1,14 +1,24 @@
 <section class="edit">
   <form class="edit-gallery" name="editGallery" ng-submit="editGalleryCtrl.updateGallery()" novalidate>
     <fieldset>
-      <span class="item-label">name:</span>
+      <span class="item-label">gallery name:</span>
       <input class="input-std" type="text" name="name" ng-model="editGalleryCtrl.gallery.name">
     </fieldset>
     <fieldset>
-      <span class="item-label">description:</span>
+      <span class="item-label">gallery description:</span>
       <input class="input-std" type="text" name="desc" ng-model="editGalleryCtrl.gallery.desc">
     </fieldset>
+    <button class="btn-std" type="submit" ng-if="!galleryItemCtrl.showEditGallery">update</button>
+  </form>
+</section>
+
+<!-- <section class="edit">
+  <form class="edit-gallery" name="editGallery" ng-submit="editGalleryCtrl.updateGallery()" novalidate>
+    <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery">
+      <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">gallery name:<span><input class="input-update" type="text" name="name" ng-model="editGalleryCtrl.gallery.name"></span></span>
+      <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">gallery description:<span><input class="input-update" type="text" name="desc" ng-model="editGalleryCtrl.gallery.desc"></span></span>
+    </div>
 
     <button class="btn-std" type="submit">update</button>
   </form>
-</section>
+</section> -->

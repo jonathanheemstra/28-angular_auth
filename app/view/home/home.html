@@ -5,10 +5,7 @@
   <div class="clearfix"></div>
   <h2>galleries</h2>
   <ul>
-    <li ng-repeat="gallery in homeCtrl.galleries">
-      <span>gallery name:<span>{{ gallery.name }}</span></span>
-      <span>gallery description:<span>{{ gallery.desc }}</span></span>
-    </li>
+    <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item"></gallery-item>
   </ul>
   <div class="clearfix"></div>
 </section>
