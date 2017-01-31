@@ -1,3 +1,17 @@
+.gallery-item {
+  .current-item {
+    cursor: pointer;
+  }
+}
+
 .btn-sm {
   float: right;
+
+  &:hover {
+    color: $brand-grey-medium
+  }
+
+  @media screen and (max-width: 750px) {
+    margin-bottom: 2vw;
+  }
 }

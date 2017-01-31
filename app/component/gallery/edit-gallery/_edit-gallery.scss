@@ -1,6 +1,18 @@
-.edit {  
+.edit {
   .btn-std {
     float: right;
     margin: 4vw 0 0 0;
+    width: 20%;
+
+    &:hover {
+      background-color: $btn-hover-dark;
+      color: $brand-white;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 60%;
+      padding: 3vw 6vw;
+      font-size: $font-size-std-sv;
+    }
   }
 }
