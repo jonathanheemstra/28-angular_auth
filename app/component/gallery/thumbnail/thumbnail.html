@@ -1,4 +1,18 @@
-<div class="thumbnail">
+<div class="thumbnail clearfix">
   <img ng-src="{{ thumbnailCtrl.pic.imageURI }}" alt="{{ thumbnailCtrl.pic.desc }}">
-  <span class="btn-std" ng-click="thumbnailCtrl.deletePic()">delete</span>
+  <div>
+    <span>
+      name:
+      <span>{{ thumbnailCtrl.pic.name }}</span>
+    </span>
+    <span>
+      description:
+      <span>{{ thumbnailCtrl.pic.desc }}</span>
+    </span>
+    <span>
+      gallery:
+      <span>{{ thumbnailCtrl.gallery.name }}</span>
+    </span>
+    <button class="btn-std" ng-click="thumbnailCtrl.deletePic()">delete</button>
+  </div>
 </div>

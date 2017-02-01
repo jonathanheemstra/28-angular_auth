@@ -1,0 +1,35 @@
+.upload-pic {
+  h3 {
+    font-size: $font-size-lg;
+
+    span{
+      font-weight: 700;
+    }
+  }
+
+  .btn-std {
+    float: right;
+    width: 20%;
+
+    &:hover {
+      background-color: $btn-hover-dark;
+      color: $brand-white;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 60%;
+      padding: 3vw 6vw;
+      font-size: $font-size-std-sv;
+    }
+  }
+
+  p {
+    float: left;
+    margin: 1vw 0;
+
+    &:hover {
+      color: $brand-grey-medium;
+      text-decoration: underline;
+    }
+  }
+}
