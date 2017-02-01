@@ -8,7 +8,7 @@
     </fieldset>
 
     <div>
-      <p class="grab-img" ng-model="uploadPicCtrl.pic.file" ngf-select>select files</p>
+      <p class="grab-img" ng-model="uploadPicCtrl.pic.file" ngf-select="uploadFiles($files)" multiple>select files</p>
     </div>
 
     <button class="btn-std" type="submit">upload</button>
