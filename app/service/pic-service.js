@@ -42,8 +42,6 @@ function picService($q, $log, $http, Upload, authService) {
   service.DeleteGalleryPic = function(galleryData, picData) {
     $log.debug('picService.DeleteGalleryPic');
 
-    console.log('galleryData ====== ', galleryData);
-    console.log('picData ====== ', picData);
     return authService.getToken()
     .then( token => {
       let url = `${__API_URL__}/api/gallery/${galleryData._id}/pic/${picData._id}`;
@@ -53,9 +51,6 @@ function picService($q, $log, $http, Upload, authService) {
         }
       };
       return $http.delete(url, config);
-    })
-    .then( res => {
-      console.log(res);
     })
     .catch( err => {
       $log.error(err.message);
