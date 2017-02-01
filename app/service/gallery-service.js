@@ -109,10 +109,10 @@ function galleryService($q, $log, $http, authService) {
         let current = service.galleries[i];
         if(current._id === galleryID) {
           service.galleries.splice(i, 1);
-          return;
+          break;
         }
       }
-      return res.data; // check this *****
+      return res.data;
     })
     .catch( err => {
       $log.error(err.message);

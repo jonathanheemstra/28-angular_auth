@@ -13,8 +13,6 @@ module.exports = {
 function ThumbnailController($log, picService) {
   $log.debug('ThumbnailController');
 
-  // TODO: need a methdo to fill in for the delete-done
-
   this.deletePic = function() {
     picService.DeleteGalleryPic(this.gallery, this.pic)
     .then( () => {

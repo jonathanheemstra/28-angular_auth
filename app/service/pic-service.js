@@ -30,6 +30,7 @@ function picService($q, $log, $http, Upload, authService) {
       });
     })
     .then( res => {
+      console.log('galleryData ======== ', galleryData);
       galleryData.pics.unshift(res.data);
       return res.data;
     })
@@ -51,6 +52,16 @@ function picService($q, $log, $http, Upload, authService) {
         }
       };
       return $http.delete(url, config);
+    })
+    .then( res => {
+      for(let i = 0; i < galleryData.pics.length; i++) {
+        let current = galleryData.pics[i];
+        if(current._id === picData._id) {
+          galleryData.pics.splice(i, 1);
+          break;
+        }
+      }
+      return res.data;
     })
     .catch( err => {
       $log.error(err.message);
