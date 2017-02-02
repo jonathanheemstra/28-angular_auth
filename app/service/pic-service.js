@@ -18,6 +18,7 @@ function picService($q, $log, $http, Upload, authService) {
         Accept: 'application/json'
       };
 
+      console.log('HITTTTT 1', headers.Authorization);
       return Upload.upload({
         url,
         headers,
@@ -30,7 +31,7 @@ function picService($q, $log, $http, Upload, authService) {
       });
     })
     .then( res => {
-      console.log('galleryData ======== ', galleryData);
+      console.log('HITTTTT 2', res);
       galleryData.pics.unshift(res.data);
       return res.data;
     })
