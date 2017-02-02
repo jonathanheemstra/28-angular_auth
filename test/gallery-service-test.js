@@ -38,6 +38,44 @@ describe('Gallery Service', function() {
     });
   });
 
+  describe('galleryService.fetchGalleries()', () => {
+    it('should fetch galleries', () => {
+      let headers = {
+        Accept: 'application/json',
+        Authorization: 'Bearer test token'
+      };
+
+      this.$httpBackend.expectGET('http://localhost:3000/api/gallery', headers)
+      .respond(200);
+
+      this.galleryService.fetchGalleries();
+      this.$httpBackend.flush();
+      this.$rootScope.$apply();
+    });
+  });
+
+  describe('galleryService.updateGalleries()', () => {
+    it('should update gallery', () => {
+      let galleryID = 'testid';
+      let galleryData = {
+        name: 'update example gallery',
+        desc: 'update example description'
+      };
+      let headers = {
+        Accept: 'application/json',
+        Authorization: 'Bearer test token',
+        'Content-Type': 'application/json'
+      };
+
+      this.$httpBackend.expectPUT('http://localhost:3000/api/gallery/testid', galleryData, headers)
+      .respond(200);
+
+      this.galleryService.updateGallery(galleryID, galleryData);
+      this.$httpBackend.flush();
+      this.$rootScope.$apply();
+    });
+  });
+
   describe('galleryService.deleteGallery()', () => {
     it('should delete a gallery', () => {
       let galleryID = 'testid';
