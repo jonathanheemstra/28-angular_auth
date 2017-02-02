@@ -22,7 +22,7 @@ module.exports = function(config) {
       'test/**/*-test.js': ['webpack'],
       'app/entry.js': ['webpack']
     },
-    reporters: ['progress'],
+    reporters: ['mocha'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
