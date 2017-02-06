@@ -1,0 +1,45 @@
+.thumbnail {
+  margin-top: 3vw;
+  border-top: 1px solid $brand-grey-dark;
+
+
+  img {
+    float: left;
+    max-width: 60%;
+    margin: 3vw 0;
+  }
+  div {
+    float: left;
+    font-weight: 700;
+    max-width: 40%;
+    margin: 3vw 0;
+
+    span {
+      display: block;
+      padding: 1vw;
+
+      span {
+        font-weight: 200;
+        display: inline;
+        padding-left: 1vw;
+      }
+    }
+  }
+
+  .btn-std {
+    float: left;
+    margin: 0 0 0 1vw;
+    width: 40%;
+
+    &:hover {
+      background-color: $btn-hover-dark;
+      color: $brand-white;
+    }
+
+    @media screen and (max-width: 750px) {
+      width: 60%;
+      padding: 3vw 6vw;
+      font-size: $font-size-std-sv;
+    }
+  }
+}

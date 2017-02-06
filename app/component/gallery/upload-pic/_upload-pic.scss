@@ -1,18 +1,14 @@
-.login-form {
-  label {
+.upload-pic {
+  h3 {
     font-size: $font-size-lg;
 
-    @media screen and (max-width: 750px) {
-      font-size: $font-size-lg-sv;
+    span{
+      font-weight: 700;
     }
   }
 
-  button {
+  .btn-std {
     float: right;
-    padding: 1vw 2vw;
-    background-color: $brand-grey-dark;
-    color: $brand-white;
-    margin-top: 2vw;
     width: 20%;
 
     &:hover {
@@ -24,6 +20,16 @@
       width: 60%;
       padding: 3vw 6vw;
       font-size: $font-size-std-sv;
+    }
+  }
+
+  p {
+    float: left;
+    margin: 1vw 0;
+
+    &:hover {
+      color: $brand-grey-medium;
+      text-decoration: underline;
     }
   }
 }
