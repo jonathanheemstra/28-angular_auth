@@ -18,15 +18,21 @@ let plugins = [
   new webpack.DefinePlugin({
     __API_URL__: JSON.stringify(process.env.API_URL),
     __DEBUG__: JSON.stringify(!production)
+  }),
+  new webpack.LoaderOptionsPlugin({
+    sassLoader: {
+      includePaths: [`${__dirname}/app/scss`]
+    }
   })
 ];
 
 if(production) {
   plugins = plugins.concat([
     new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
       mangle: true,
       compress: {
-        warning: false
+        warnings: true
       }
     }),
     new CleanPlugin()
@@ -38,34 +44,37 @@ module.exports = {
   devtool: production ? false : 'eval',
   plugins,
   output: {
-    path: 'build',
+    path: `${__dirname}/build`,
     filename: 'bundle.js'
   },
-  sassLoader: {
-    includePaths: [`${__dirname}/app/scss`]
-  },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel'
+        use: 'babel-loader'
       },
       {
         test: /\.html$/,
-        loader: 'html'
+        use: 'html-loader'
       },
       {
         test: /\.(woff|ttf|svg|eot).*/,
-        loader: 'url?limit=10000=font/[hash].[ext]'
+        use: 'url?limit=10000=font/[hash].[ext]'
       },
       {
         test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,
-        loader: 'url?limit=10000&name=image/[hash].[ext]'
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[hash].[ext]',
+        },
       },
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('style', 'css!resolve-url!sass?sourceMap')
+        loader: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader!resolve-url-loader!sass-loader?sourceMap',
+        })
       }
     ]
   }
