@@ -6,6 +6,8 @@
     <title></title>
   </head>
   <body>
+    <div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)">{{alert.msg}}</div>
+
     <header>
       <navbar></navbar>
       <div class="clearfix"></div>
@@ -15,6 +17,7 @@
     </main>
     <footer>
       <div>built by: <a href="https://www.linkedin.com/in/jonathanheemstra/">Jonny Heemstra</a></div>
+      <social-icons></social-icons>
     </footer>
   </body>
 </html>
