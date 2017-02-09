@@ -60,7 +60,10 @@ module.exports = {
       },
       {
         test: /\.(woff|ttf|svg|eot).*/,
-        use: 'url?limit=10000=font/[hash].[ext]'
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[hash].[ext]',
+        },
       },
       {
         test: /\.(jpg|jpeg|svg|bmp|tiff|gif|png)$/,

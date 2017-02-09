@@ -1,14 +1,12 @@
 <li class="gallery-item">
-  <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery">
-    <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">
-      name:
-      <span>{{ galleryItemCtrl.gallery.name }}</span>
-    </span>
-    <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">
-      description:
-      <span>{{ galleryItemCtrl.gallery.desc }}</span>
-    </span>
-  </div>
+  <uib-accordion>
+    <div class="current-item" ng-if="!galleryItemCtrl.showEditGallery" uib-accordion-group class="panel-default" heading="{{ galleryItemCtrl.gallery.name }}">
+      <span ng-click="galleryItemCtrl.showEditGallery = !galleryItemCtrl.showEditGallery">
+        description:
+        <span>{{ galleryItemCtrl.gallery.desc }}</span>
+      </span>
+    </div>
+  </uib-accordion>
 
   <edit-gallery ng-if="galleryItemCtrl.showEditGallery" gallery="galleryItemCtrl.gallery"></edit-gallery>
 
