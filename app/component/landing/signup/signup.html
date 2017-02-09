@@ -1,8 +1,8 @@
 <section class="signup">
   <form class="signup-form" ng-submit="signupCtrl.signup(signupCtrl.user)" novalidate>
-    <input class="input-std" type="text" placeholder="name" ng-minlength="4" ng-model="signupCtrl.user.username" required>
-    <input class="input-std" type="email" placeholder="email" ng-model="signupCtrl.user.email" required>
-    <input class="input-std" type="password" placeholder="password" ng-minlength="3" ng-model="signupCtrl.user.password" required>
+    <input class="input-std" type="text" placeholder="name" ng-minlength="4" ng-model="signupCtrl.user.username" uib-tooltip="please provide a username that is at least 4 characters long" tooltip-trigger="'mouseenter'" tooltip-enable="!signupCtrl.user.username" required>
+    <input class="input-std" type="email" placeholder="email" ng-model="signupCtrl.user.email" uib-tooltip="please provide a valid email address" tooltip-trigger="'mouseenter'" tooltip-enable="!signupCtrl.user.email" required>
+    <input class="input-std" type="password" placeholder="password" ng-minlength="8" ng-model="signupCtrl.user.password" uib-tooltip="minimum password length of 8 characters is required" tooltip-trigger="'mouseenter'" tooltip-enable="!signupCtrl.user.password" required>
     <input type="submit" value="sign up" class="btn-std">
   </form>
   <div class="clearfix"></div>

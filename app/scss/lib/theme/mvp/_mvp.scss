@@ -40,3 +40,41 @@ footer {
     }
   }
 }
+
+.social {
+  li {
+    display: inline-block;
+    margin: 2vw;
+  }
+  .facebook {
+    background: url('../../../../assets/img/Social_circle.png') no-repeat -11px -10px;
+	  width: 55px;
+	  height: 54px;
+  }
+  .twitter {
+    background: url('../../../../assets/img/Social_circle.png') no-repeat -375px -10px;
+	  width: 55px;
+	  height: 54px;
+  }
+  .youtube {
+    background: url('../../../../assets/img/Social_circle.png') no-repeat -314px -10px;
+	  width: 55px;
+	  height: 54px;
+  }
+  .linkedin {
+    background: url('../../../../assets/img/Social_circle.png') no-repeat -131px -10px;
+	  width: 56px;
+	  height: 54px;
+  }
+  .rss {
+    background: url('../../../../assets/img/Social_circle.png') no-repeat -70px -10px;
+	  width: 56px;
+	  height: 54px;
+  }
+}
+
+.alert {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}

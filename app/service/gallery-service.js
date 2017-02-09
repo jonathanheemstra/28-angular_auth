@@ -1,8 +1,8 @@
 'use strict';
 
-module.exports = ['$q', '$log', '$http', 'authService', galleryService];
+module.exports = ['$q', '$log', '$http', 'authService', 'alertService', galleryService];
 
-function galleryService($q, $log, $http, authService) {
+function galleryService($q, $log, $http, authService, alertService) {
   $log.debug('galleryService');
 
   let service = {};
@@ -79,7 +79,11 @@ function galleryService($q, $log, $http, authService) {
       for(let i = 0; i < service.galleries.length; i++) {
         let current = service.galleries[i];
         if(current._id === galleryID) {
+          res.data.status = res.status;
+          res.data.statusText = res.statusText;
           service.galleries[i] = res.data;
+          if(service.galleries[i].status === 200) alertService.add('success', `${service.galleries[i].status} - successfully updated ${service.galleries[i].name} gallery`);
+          if(service.galleries[i].status !== 200) alertService.add('danger', `${service.galleries[i].statusText} - failed to update ${service.galleries[i].name} gallery`);
           return;
         }
       }

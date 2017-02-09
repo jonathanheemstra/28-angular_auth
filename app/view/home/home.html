@@ -4,9 +4,10 @@
   <create-gallery></create-gallery>
   <div class="clearfix"></div>
   <h2>galleries</h2>
+  <input class="input-std" ng-model="homeCtrl.gallerySearchTerm" type="text" placeholder="search galleries">
   <div class="gallery-image-container">
     <ul>
-      <gallery-item ng-repeat="item in homeCtrl.galleries" gallery="item" delete-done="homeCtrl.galleryDeleteDone(galleryData)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
+      <gallery-item ng-repeat="item in homeCtrl.galleries | gallerySearch: homeCtrl.gallerySearchTerm" gallery="item" delete-done="homeCtrl.galleryDeleteDone(galleryData)" ng-click="homeCtrl.currentGallery = item"></gallery-item>
     </ul>
   </div>
 
